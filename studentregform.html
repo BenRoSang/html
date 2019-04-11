@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Student Registeration Form</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			var i=1;
+			$('#btnreg').click(function () {
+				var name = $('#name').val();
+				var age = $('#age').val();
+				if (name && age) {
+					console.log(name,age);
+					var tr = '<tr><td>'+i+'</td><td>'+name+'</td><td>'+age+'</td></tr>';
+					$('table').append(tr);
+					i++;
+				}
+			})
+
+		})
+	</script>
+</head>
+
+<body>
+	Name: <input type="text" id="name"><br><br>
+	Age: <input type="number" id="age"><br><br>
+
+	<button id="btnreg">Register</button>
+
+	<table>
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Name</th>
+				<th>Age</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+		</tbody>
+	</table>
+</body>
+
+</html>
